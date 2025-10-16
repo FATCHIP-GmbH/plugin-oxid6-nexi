@@ -1,0 +1,38 @@
+{
+    "name": "fatchip-gmbh/nexi-payments-ox6",
+    "description": "Nexi payments module for OXID eShop version 6.3-6.5",
+    "type": "oxideshop-module",
+    "keywords": ["oxid", "modules", "nexi"],
+    "license": "proprietary",
+    "support": {
+        "source": "https://github.com/FATCHIP-GmbH/plugin-oxid6-nexi",
+        "issues": "https://www.fatchip.de"
+    },
+    "conflicts": {
+        "oxid-esales/oxideshop-ce": "<6.3 >=7.0"
+    },
+    "archive": {
+        "exclude": ["/resources"]
+    },
+    "extra": {
+        "oxideshop": {
+            "blacklist-filter": [
+                "resources/**/*",
+                "resources/**/*."
+            ],
+            "target-directory": "fatchip-gmbh/nexi_payments"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Fatchip\\ComputopPayments\\": "src/",
+            "Fatchip\\CTPayment\\" : "lib/CTPayment"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "oxid-esales/oxideshop-unified-namespace-generator": true,
+            "oxid-esales/oxideshop-composer-plugin": true
+        }
+    }
+}
