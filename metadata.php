@@ -25,7 +25,7 @@ $aModule = [
                 <p><b>Support</b><br><br>Personal support via e-mail to <a href="mailto:nexi-helpdesk@computop.com">nexi-helpdesk@computop.com</a></p>',
     ],
     'thumbnail' => 'assets/img/nexi_logo.png',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
     'author' => 'Fatchip-GmbH',
     'url' => 'https://www.fatchip.de/',
     'email' => '',
