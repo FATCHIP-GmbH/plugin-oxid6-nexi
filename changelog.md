@@ -1,3 +1,6 @@
+### 1.0.2
+* set selected language in CTPaymentMethodIframe
+
 ### 1.0.1
 * Fixed problem with session id response parameters
 * Fixed problem creditcard testmode
