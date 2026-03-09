@@ -268,6 +268,10 @@ class Order extends Order_parent
         $orderId = \OxidEsales\Eshop\Core\Registry::getSession()->getVariable('sess_challenge');
         $this->load($orderId);
 
+        if (empty($this->oxorder__oxuserid)) {
+            $this->oxorder__oxuserid = new \OxidEsales\Eshop\Core\Field($oUser->getId());
+        }
+
         // payment information
         $oUserPayment = $this->_setPayment($oBasket->getPaymentId());
 
