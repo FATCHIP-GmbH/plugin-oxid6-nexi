@@ -5,6 +5,7 @@ $aLang = [
     'charset'                                               => 'UTF-8',
 
     'SHOP_MODULE_GROUP_COMPUTOP_GENERAL'                    => 'General',
+    'SHOP_MODULE_GROUP_COMPUTOP_CRONJOBS'                   => 'Cronjobs',
     'SHOP_MODULE_GROUP_COMPUTOP_CREDITCARD'                 => 'Credit Card',
     'SHOP_MODULE_GROUP_COMPUTOP_PAYPAL'                     => 'PayPal',
     'SHOP_MODULE_GROUP_COMPUTOP_PAYPALEXPRESS'              => 'PayPal Express',
@@ -27,6 +28,9 @@ $aLang = [
     'SHOP_MODULE_encryption_aes'                            => 'AES encryption',
     'SHOP_MODULE_refnr_prefix'                              => 'Reference Number Prefix',
     'SHOP_MODULE_refnr_suffix'                              => 'Reference Number Suffix',
+
+    'SHOP_MODULE_cronFinalizeOrdersActive'                  => 'Cronjob "Finalizing of paid/authorized but not completed orders" active',
+    'SHOP_MODULE_cronFinalizeOrdersDays'                    => 'Time window during which attempts are made to finalize paid/authorized but not completed orders',
 
     'SHOP_MODULE_creditCardMode'                            => 'Credit Card - Mode',
     'SHOP_MODULE_creditCardMode_IFRAME'                     => 'IFrame',
@@ -56,7 +60,6 @@ $aLang = [
     'SHOP_MODULE_paypalExpressClientID'                     => 'PayPal Express - Client-ID',
     'SHOP_MODULE_paypalExpressMerchantID'                   => 'PayPal Express - Merchant-ID',
     'SHOP_MODULE_paypalExpressPartnerAttributionID'         => 'Nexi - Partner-Attribution-ID',
-    'SHOP_MODULE_paypalExpressShippingCosts'                => 'PayPal Express - Default Shipping Costs',
 
     'SHOP_MODULE_lastschriftCaption'                        => 'Direct Debit - Capture Mode',
     'SHOP_MODULE_lastschriftCaption_AUTO'                   => 'Automatic',
@@ -89,11 +92,12 @@ $aLang = [
 
     'SHOP_MODULE_ratepayDirectDebitRequestBic'              => 'Request BIC',
 
-    'HELP_SHOP_MODULE_blMollieShowIcons'                    => 'Your Merchant Id (username)',
     'HELP_SHOP_MODULE_mac'                                  => 'Your HMAC key',
     'HELP_SHOP_MODULE_blowfishPassword'                     => 'Your encryption password',
     'HELP_SHOP_MODULE_debuglog'                             => 'Creates a log file "FatchipCTPayment_.log" with debug output in the Oxid log directory.',
     'HELP_SHOP_MODULE_encryption'                           => 'Type of encryption used.<br>Blowfish encryption is set up as standard by Nexi Support.<br>If Blowfish encryption (bf-cbc) is not available on your host, please contact Nexi Support to have AES enabled.<br>If AES has been activated by Nexi, switch to AES.',
+
+    'HELP_SHOP_MODULE_cronFinalizeOrdersActive'             => 'This cronjob has the job to finalize orders where the customer paid successfully but seemingly didnt return to the shop to complete the order process. The cronjob only finalizes orders within the time period configured in the setting "Time window during which attempts are made to finalize paid/authorized but not completed orders".<br><br>For this cronjob to work, in addition to this checkbox you have to ensure that the cronjob is set up properly. You can find information on how to set up the cronjob in the README.md of this module.',
 
     'HELP_SHOP_MODULE_creditCardMode'                       => '<b>IFrame</b>: The creditcard form will be displayed after clicking "confirm payment" in an iframe<BR><b>Silent Mode</b>: The creditcard form will be displayed on the "complete order" page.<BR><b>Payment Page</b>: Credit card details are entered in a blank page after clicking on "Order payment".',
     'HELP_SHOP_MODULE_creditCardCaption'                    => '<b>AUTO</b>: Reserved amounts will be captured automatically.<BR><b>MANUAL</b>: Reserverd amounts have to be captured manuelly in the shop backend.</p>',
@@ -170,4 +174,6 @@ $aLang = [
     'FATCHIP_COMPUTOP_REFUND' => 'Refund:',
     'FATCHIP_COMPUTOP_REFUND_ALL' => 'Full Refund:',
     'FATCHIP_COMPUTOP_PAYMENTS_APILOG_MAIN' => 'API Log Details',
+    'FATCHIP_COMPUTOP_DAY' => 'day',
+    'FATCHIP_COMPUTOP_DAYS' => 'days',
 ];
