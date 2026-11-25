@@ -1,3 +1,8 @@
+### 1.1.1
+* fix PPE-orderhandling
+* reset unfinished PPE orders on new attempts
+* prevent manual capture on not finished orders
+
 ### 1.1.0
 * Added cronjob for finalizing orders
 * fix problem with remaining basket, after paid order but no successful redirect
